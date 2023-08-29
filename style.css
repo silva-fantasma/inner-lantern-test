@@ -1,0 +1,1238 @@
+@font-face {
+    font-family: poppins;
+    src: url(./fonts/Poppins/Poppins-Light.ttf);
+}
+
+
+:root{
+
+    --dark: #d31717;
+    --lantern-yellow: #f0a63c;
+    --monk-orange:  #d88c3a;
+    --light: rgb(255, 247, 235);
+}
+
+.active {
+  border-bottom: 50px solid #07bae6;
+}
+
+* {box-sizing: border-box;}
+
+
+html{
+
+    background-color: var(--lantern-yellow);
+    scroll-behavior: smooth;
+}
+
+.container{
+    max-height: 100vh;      
+    scroll-snap-type: y proximity;
+	overflow-y: scroll;
+    overflow-x: hidden; 
+/* 	
+    flex-basis: 100%;
+
+	scroll-snap-type: y mandatory;
+	&.proximity {
+			scroll-snap-type: y proximity;
+	} */
+}
+
+.snap-scroll {
+	scroll-snap-align: start;
+}
+
+
+
+#navbar {
+    overflow: hidden;
+    background-color: transparent;
+    padding: 0 0;
+    transition: 0.4s;
+    position: fixed;
+    /* min-width: 100%; */
+    width: 100%;
+
+    /* margin-left: 5vw; */
+
+
+    z-index: 98;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+
+    transition: all 0.1s ease;
+    -moz-transition    : all 0.1s ease;
+    -o-transition      : all 0.1s ease;
+    -webkit-transition : all 0.1s ease;
+    transition         : all 0.1s ease;
+}
+
+
+#navbar-right{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+
+
+
+#navbar a {
+    text-align: center;
+    line-height:0;
+/* border-bottom: 2px solid #ecf0f1; */
+    text-decoration: none;
+  /* border-bottom: 50px solid #07bae6; */
+    font-size: 1.1vw;
+    font-family: poppins;
+    font-weight: 100;
+    font-style: normal;
+    color: #ffffff;
+
+    -moz-transition    : all 0.25s ease;
+    -o-transition      : all 0.25s ease;
+    -webkit-transition : all 0.25s ease;
+    transition         : all 0.25s ease;
+}
+
+#second{
+    position: fixed;
+    transform: translate(-5vw, 3.7vh);
+}
+
+#logo{
+
+    position: fixed;
+    transform: translate(-45.8vw, 0);
+}
+
+#navbar-right #logo-space{
+    color: transparent;
+    font-family: "ivypresto-display", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2vw;
+
+    margin-top: -0.4vw;
+}
+
+
+a:hover{
+    transition: all ease-in-out 100ms;
+    cursor: pointer;
+}
+
+
+
+#navbar-right>*{
+ margin-inline: 3.8vw;
+}
+
+#link5{
+    font-size: 1.25vw;
+    white-space: nowrap;
+    background-color: #ad2000;
+
+}
+#link5:hover{
+    background-color: #ff9100ae;
+}
+
+#navbar #logo {
+
+    -moz-transition    : all 0.4s ease;
+    -o-transition      : all 0.4s ease;
+    -webkit-transition : all 0.4s ease;
+    transition         : all 0.4s ease;
+
+    color: white;
+
+    font-family: "ivypresto-display", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.3vw;
+
+    white-space: nowrap;
+
+    margin-top: -0.4vw;
+}
+
+
+/* 
+#navbar a:hover {
+  /* background-color: #ddd;
+  color: black; 
+} */
+
+/* #navbar a.active {
+  background-color: dodgerblue;
+  color: white;
+} */
+
+
+
+/* @media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+} */
+
+
+
+
+
+/* Mobile NAV */
+
+.mobile-nav #myLinks{
+  display: none;
+}
+
+.mobile-nav .icon{
+    display: none;
+}
+
+#mobile-logo{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/*BODY*/
+
+body{
+    width: 100vw;
+    height: auto;
+    margin: 0;
+
+
+
+
+
+}
+
+
+
+/* Front Page */
+.front-page{
+    width: 100vw;
+    min-height: 100vh;
+
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+
+.front-page .right-side{
+    background-image: url(./images/original\ low\ res.jpg);
+    background-position: left center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100vh;
+}
+
+.front-page .left-side{
+    height: 100vh;
+    width: 50%;
+    /* background-color: #fb9b20; */
+    text-align: center;
+}
+
+
+button, .button{
+    cursor: pointer;
+    /* background-color: rgba(255, 255, 255, 0.196); */
+    background-color: #ad200051;
+
+
+    border-radius: 6px;
+    border: 1px solid #ffffff;
+    color: white;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.25vw;
+}
+
+button:hover, .buttons:hover{
+    background-color: rgb(253, 155, 26);
+    transition: all 1s ease;
+
+}
+
+
+.front-page .left-side h3{
+    color: white;
+    /* font-size: calc(50px + 0.5vw); */
+    font-size: 3.5vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 500;
+    font-style: normal;
+
+    text-align: center;
+    padding-top: 20vh;
+    /* margin-inline: 1vh; */
+}
+
+.button-text{
+    color: white;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-size: 1.25vw;
+    text-align: center;
+}
+
+.front-page .left-side h4{
+    font-family: poppins;
+    font-style: italic;
+    font-weight: 100;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.25vw;
+}
+
+.front-page .left-side h5{
+ margin-top: 12vh;
+}
+
+/*SECOND PAGE*/
+.second-page{
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: var(--monk-orange);
+}
+
+.second-page .left-side{
+
+    width: 50%;
+    background-position: right center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.second-page .right-side{
+    /* background-color: #fb9b20; */
+    width: 50%;
+
+    
+}
+
+.second-page .right-side h3{
+    color: white;
+    font-size: 4vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.second-page .right-side p{
+
+    padding-inline: 5vw;
+    color: white;
+    font-family: poppins;
+    font-weight: 100;
+    font-size: 1.25vw;
+    text-align: center;
+}
+
+
+/*PROFILE PAGE*/
+
+.profile-page{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+
+
+
+.profile-page .right-side{
+    /* background-image: url(./images/brendan-ai.png); */
+    /* background-position: left left; */
+    /* background-size:contain;
+    background-repeat: no-repeat; */
+    width: 50vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-page img{
+    width: 25vw;
+    /* margin-top: 5vh; */
+}
+
+.profile-page .left-side{
+    width: 60vw;
+
+
+display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.profile-page .left-side h3{
+    color: white;
+    font-size: 4vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+    margin: 2vh;
+    text-align: center;
+    padding-top: 2.5vh;
+
+}
+
+.profile-page .left-side p{
+
+    padding-inline: 8vw;
+    color: white;
+    font-family: poppins;
+    font-weight: 0;
+    font-size: 1vw;
+    text-align: center;
+
+    margin-top: 0vh;
+}
+
+
+
+/*FACES PAGE*/
+
+
+.faces-page{
+
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+
+    background-color: var(--monk-orange);
+
+
+}
+
+.faces-page .left-side{
+    width: 50vw;
+    background-position: right center;
+
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.faces-page .left-side img{
+ width: 50vw;
+    padding-top: 7vh;
+}
+.faces-page .right-side{
+    /* background-color: #fb9b20; */
+    width: 50vw;
+    color: white;
+    font-family: poppins;
+    font-weight: 100;
+
+ 
+    
+    font-size: 1.25vw;
+    text-align: left;
+
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items:center;
+    /* align-content: flex-start; */
+
+    /* padding-top: 3vh; */
+    padding-bottom: 5vh;
+}
+
+
+.faces-page .right-side h3{
+
+    color: white;
+    font-size: 4vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+/* padding-left: 5vw; */
+    /* text-align: left; */
+    margin: 2vh;
+
+}
+
+.faces-page .right-side p{
+
+    padding-inline: 2vw;
+
+}
+
+
+
+
+
+
+
+
+
+
+/*TESTIMONIALS PAGE*/
+
+/* **** */
+.testimonials-page{ 
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.testimonials-page .right-side{
+    background-image: url(./images/balloon.jpg);
+    background-position: center center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    width: 50vw;
+}
+
+/* .testimonials-page  img{
+    /* background-image: url(./images/balloon.jpg); */
+    /* background-position: center center; */
+    /* background-size:cover; */
+    /* background-repeat:no-repeat; */
+    /* width: 50vw; */
+/* } */ 
+
+.testimonials-page .left-side{
+    width: 50vw;
+    color: white;
+    font-family: poppins;
+    font-weight: 0;
+    font-size: 1.25vw;
+    text-align: center;
+    padding-top: 3vh;
+}
+
+
+.testimonials-page .left-side h3{
+    color: white;
+    font-size: 4vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+    margin: 2vh;
+    text-align: center;
+
+}
+
+.testimonials-page .left-side p{
+
+    padding-inline: 3vw;
+
+}
+
+
+
+
+
+/* MAP */
+
+.map{
+
+    background-color: var(--monk-orange);
+    min-height: 100vh;
+}
+
+.map h3{
+    text-align: center;
+    color: white;
+    font-size: 4vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+/* padding-left: 5vw; */
+    /* text-align: left; */
+    padding-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.map p{
+    color: white;
+    font-family: poppins;
+    font-weight: 100;
+
+
+    font-size: 1vw;
+    text-align: center;
+
+    /* display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items:center; */
+    /* align-content: flex-start; */
+
+    /* padding-top: 3vh; */
+    /* padding-bottom: 5vh; */
+    padding-inline: 32vw;
+
+}
+
+.map #button-span{
+    padding-bottom: 7vh;
+}
+
+.map-row{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items:end;
+
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.map h4{
+    color: white;
+    font-family: poppins;
+    font-weight: 100;
+    font-size: 2vw;
+    text-align: center;
+
+    margin-bottom: 0px;
+
+    /* padding-top: 0px; */
+    margin-top: 0px;
+     
+
+}
+
+.map img{
+    width: 9vw;
+}
+
+
+
+/*Reassurance Page*/
+
+.reassurance{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+
+.reassurance .right-side{
+    background-image: url(./images/brendan-lecture.JPG);
+    background-position: center center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    width: 50vw;
+
+}
+
+/* .reassurance img{
+    width: auto;
+    min-height: 100vh;
+    
+} */
+
+.reassurance .left-side{
+    width: 50vw;
+    color: white;
+    font-family: poppins;
+    font-weight: 0;
+    font-size: 1.25vw;
+    text-align: center;
+    padding-top: 3vh;
+}
+
+/* 
+.reassurance .left-side h3{
+    color: white;
+    font-size: 4vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+    margin: 2vh;
+    
+    text-align: center;
+
+} */
+
+.reassurance .left-side p{
+
+    padding-inline: 3vw;
+    padding-top: 25vh;
+}
+
+
+
+
+
+
+/*PRICES PAGE*/
+.prices-page{
+
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: var(--monk-orange);
+}
+
+.prices-page .left-side{
+
+    width: 50%;
+    background-position: right center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.prices-page .right-side{
+    /* background-color: #fb9b20; */
+    width: 50%;
+
+    
+}
+
+.prices-page .right-side p{
+    color: white;
+    font-size: 2vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+
+    text-align: center;
+    padding-top: 0vh;
+}
+
+.prices-page .right-side li{
+
+    padding-inline: 3vw;
+    color: white;
+    font-family: poppins;
+    font-weight: 100;
+    font-size: 1vw;
+    text-align: left;
+}
+
+
+
+
+
+/*register Page*/
+
+.register{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+
+.register .right-side{
+    /* background-image: url(./images/register-brendan.JPG);
+    background-position: center center;
+    background-size:cover;
+    background-repeat:no-repeat; */
+    width: 50vw;
+
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    
+    /* padding-top: 10vh; */
+}
+
+
+.register .left-side{
+    width: 50vw;
+    color: white;
+    font-family: poppins;
+    font-weight: 0;
+    font-size: 1.25vw;
+    text-align: center;
+    /* padding-top: 3vh; */
+}
+
+label{
+    color: white;
+    font-family: poppins;
+    font-weight: 0;
+    font-size: 1.25vw;
+
+}
+
+.register img{
+    width: 25vw;
+    
+}
+
+
+.register .left-side h3{
+    color: white;
+    font-size: 4vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-top: 18vh;
+    
+    text-align: center;
+}
+
+.register .left-side p{
+
+    padding-inline: 3vw;
+    padding-top: 0vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA */
+
+@media only screen and (max-width: 767px) {
+
+
+
+
+#navbar{
+    display: none;
+}
+
+#mobile-logo{
+    display:unset;
+    text-decoration: none;
+    position: relative;
+    font-family: "ivypresto-display", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 6vw;
+    color: #ffffff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+
+
+    display: block;
+    position:fixed;
+    left: -66%;
+    top: -10px;
+
+    padding: 0 100vw;
+    background:#f0a53c9b;
+ border-radius: 0;
+    /* 
+    /* display: block; */
+    /* 
+    text-align: center;
+ */
+    outline: none 2px #d31717;
+}
+
+/* Style the hamburger menu */
+.mobile-nav a.icon {
+    background: transparent;
+    display: block;
+    position:fixed;
+    left: 300px;
+    top: -47px;
+    outline: none 1px #d31717;
+}
+
+
+
+
+/* MOBILE NAV */
+
+/* Style the navigation menu */
+.mobile-nav {
+  overflow: hidden;
+  background: transparent;
+  position: absolute;
+    right: 3vw;
+    top: 5%;
+    position: sticky;
+
+
+
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.mobile-nav #myLinks {
+    display: none;
+
+
+    cursor: pointer;
+    border-radius: 0px;
+
+    position: sticky;
+
+}
+
+/* Style navigation menu links */
+.mobile-nav a {
+    color: white;
+    padding: 5vh 34.1vw;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+
+    border-radius: 5px;
+    text-align: center;
+    background:#d88c3a;
+    outline: solid 1px #ffffff52;
+
+    margin: 5px;
+
+    font-family: poppins;
+    font-weight: 100;
+}
+
+
+/* MOBILE NAV END*/
+
+
+
+
+
+
+
+
+/* Front Page */
+.front-page{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
+
+
+.front-page .right-side{
+    background-image: url(./images/original\ low\ res.jpg);
+    background-position: left center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.front-page .left-side{
+
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.front-page .left-side h3{
+    color: white;
+
+    font-size: 7vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 500;
+    font-style: normal;
+
+    text-align: center;
+
+    /* padding-top: 20vh; */
+
+}
+
+
+.front-page .left-side h4{
+    font-family: poppins;
+    font-style: italic;
+    font-weight: 100;
+    color: #ffffff;
+    text-align: center;
+    font-size: 3vw;
+}
+
+
+.button-text{
+    color: white;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 12vh;
+}
+
+button{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.196);
+    border-radius: 6px;
+    border: 1px solid #ffffff;
+    color: white;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 3.5vw;
+}
+
+button:hover{
+    background-color: rgb(253, 155, 26);
+    transition: all 1s ease;
+
+}
+
+
+
+
+
+
+/* SECOND PAGE */
+
+.second-page{
+
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+
+    background-color: var(--monk-orange);
+}
+
+.second-page .left-side{
+    width: 100vw;    
+    height: 100vh;
+background-position: right center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.second-page .right-side{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.second-page .right-side h3{
+    color: white;
+    font-size: 7vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.second-page .right-side p{
+
+    padding-inline: 5vw;
+    color: white;
+    font-family: poppins;
+    font-weight: 100;
+    font-size: 3vw;
+    text-align: center;
+
+}
+
+
+
+
+
+
+/* PROFILE PAGE */
+.profile-page{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.profile-page .left-side{
+    width: 100vw;
+    height: 100vh;
+}
+.profile-page .right-side{
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.profile-page .left-side h3{
+    color: white;
+    font-size: 7vw;
+    font-family: ivypresto-display, serif;
+    font-weight: 100;
+    font-style: normal;
+
+    text-align: center;
+    /* padding-top: 1vh; */
+}
+
+.profile-page .left-side p{
+    padding-inline: 8vw;
+    font-size: 3vw;
+}
+
+
+
+
+
+
+/* FACES PAGE */
+
+.faces-page{
+
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--monk-orange);
+
+}
+
+.faces-page .left-side{
+    width: 100vw;
+
+}
+.faces-page .right-side{
+    width: 100vw;
+    height: 100vh;
+
+    padding-inline: 3vw;
+    text-align: center;
+    /* display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center; */
+}
+
+.faces-page .left-side img{
+    width: 100vw;
+    padding-top: 3vh;
+
+}
+.faces-page .right-side h3{
+
+    text-align: center;
+    font-size: 7vw;
+    padding-inline: 5vw;
+    padding-top: 0;
+}
+
+.faces-page .right-side p{
+    text-align: left;
+    font-size: 3vw;
+}
+
+
+
+
+
+
+
+/* TESTIMONIALS PAGE */
+
+.testimonials-page{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+
+
+}
+
+.testimonials-page .left-side{
+    width: 100vw;
+    height: auto;
+
+    padding-top: 3vh;
+    font-size: 3vw;
+}
+.testimonials-page .right-side{
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.testimonials-page .left-side h3{
+    font-size: 7vw;
+}
+
+.testimonials-page .left-side p{
+    padding-inline: 10vw;
+    font-size: 3vw;
+}
+
+
+}
